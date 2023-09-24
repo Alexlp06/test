@@ -37,14 +37,27 @@
             </tr>
         </tbody>
     </table>
-    <img alt=":D" src="https://assets.editorial.aetnd.com/uploads/2022/11/napoleon-exile-gettyimages-1288489073.jpg" width="400px" height="300px">
+    <img id="img_1" style="display:block;" alt=":D"  src="https://assets.editorial.aetnd.com/uploads/2022/11/napoleon-exile-gettyimages-1288489073.jpg" width="400px" height="300px">
     <p align="center" >
         <a href="https://github.com/" target="_blank" >Не клацати! </a>
     </p>
+    <button type="submit" onclick="switchImg()">Показати/сховати</button>
     <h3 size="40">Оголошення </h3>
     <p align="left"> <font color="green" size="5" >I hate biology so much, I hate it</font></p>
     <p align="left"> <font color="blue" face="Verdana" size="5">I hate all the stuff I have to memorise</font></p>
     <hr>
     <p></p>
 </body>
+<script>
+    function switchImg(){
+       let elem = document.getElementById('img_1');
+       let style = getComputedStyle(elem);
+       if (style.display === 'none'){
+        document.getElementById('img_1').style.display='block';
+       } else if (style.display === 'block') {
+        document.getElementById('img_1').style.display='none'
+       }
+    }
+    
+</script>
 </html>
