@@ -1,50 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
+  <head>
+    <meta charset="UTF-8" />
+
     <title>Добрий день</title>
-</head>
-<body>
+    <link rel="style" href= "style.css"
+  </head>
+  <body>
     <h1 align="center">Hello there</h1>
-    <table border ="1" width="500">
-        <thead>
-            <tr>
-                <th>Предмет</th>
-                <th>Оцінка</th>
-                <th>Емоція</th>
-                <th>Любов</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Біологія</td>
-                <td>фігня</td>
-                <td>сум</td>
-                <td>не люблю</td>
-            </tr>
-            <tr>
-                <td>Фізра</td>
-                <td>круто</td>
-                <td>неймовірно</td>
-                <td>обожнюю</td>
-            </tr>
-            <tr>
-                <td>Математика</td>
-                <td>норм</td>
-                <td>норм</td>
-                <td>норм</td>
-            </tr>
-        </tbody>
+    <table border="1" width="500">
+      <thead>
+        <tr>
+          <th>Предмет</th>
+          <th>Оцінка</th>
+          <th>Емоція</th>
+          <th>Любов</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Біологія</td>
+          <td>фігня</td>
+          <td>сум</td>
+          <td>не люблю</td>
+        </tr>
+        <tr>
+          <td>Фізра</td>
+          <td>круто</td>
+          <td>неймовірно</td>
+          <td>обожнюю</td>
+        </tr>
+        <tr>
+          <td>Математика</td>
+          <td>норм</td>
+          <td>норм</td>
+          <td>норм</td>
+        </tr>
+      </tbody>
     </table>
-    <img alt=":D" src="https://assets.editorial.aetnd.com/uploads/2022/11/napoleon-exile-gettyimages-1288489073.jpg" width="400px" height="300px">
-    <p align="center" >
-        <a href="https://github.com/" target="_blank" >Не клацати! </a>
+    <img
+      id="napoleon"
+      style="display: block"
+      alt=":D"
+      src="https://assets.editorial.aetnd.com/uploads/2022/11/napoleon-exile-gettyimages-1288489073.jpg"
+      width="400px"
+      height="300px"
+    />
+    <p align="center">
+      <a href="https://github.com/" target="_blank">Не клацати! </a>
     </p>
-    <h3 size="40">Оголошення </h3>
-    <p align="left"> <font color="green" size="5" >I hate biology so much, I hate it</font></p>
-    <p align="left"> <font color="blue" face="Verdana" size="5">I hate all the stuff I have to memorise</font></p>
-    <hr>
+    <button type="submit" onclick="switchImg()">Показати/сховати</button>
+    <h3 size="40">Оголошення</h3>
+    <p align="left">
+      <font color="green" size="5">I hate biology so much, I hate it</font>
+    </p>
+    <p align="left">
+      <font color="blue" face="Verdana" size="5"
+        >I hate all the stuff I have to memorise</font
+      >
+    </p>
+    <hr />
     <p></p>
-</body>
+  </body>
+  <script>
+    function switchImg() {
+      const result = confirm("Показати/сховати картинку?");
+      const elem = document.getElementById("napoleon");
+      const style = getComputedStyle(elem);
+      if (result) {
+        if (style.display === "none") {
+          elem.style.display = "block";
+        } else if (style.display === "block") {
+          elem.style.display = "none";
+        }
+      } else {
+        if (style.display === "none") {
+          elem.style.display = "none";
+        } else if (style.display === "block") {
+          elem.style.display = "block";
+        }
+      }
+    }
+  </script>
 </html>
